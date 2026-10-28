@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camille Tremblay — Courtier immobilier résidentiel, Montréal</title>
+<meta name="description" content="Camille Tremblay, courtier immobilier résidentiel à Montréal. Plateau, Rosemont, Villeray. Estimation gratuite de votre propriété.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f6f5f2; --line:#e3e1dc;
+    --navy:#002349; --navy-deep:#001731; --ink:#1a1a1a; --dim:#5b5b5b; --mute:#9a9a96;
+    --gold:#c29b40; --gold-dark:#a8842f; --gold-light:#e9d9b4;
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Libre Franklin",-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --max:1180px; --gutter:clamp(20px,5vw,64px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  body[data-lang="fr"] .en{display:none!important}
+  body[data-lang="en"] .fr{display:none!important}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+  .eyebrow{font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-weight:500}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--navy);line-height:1.08;letter-spacing:-.01em}
+  h2{font-size:clamp(34px,4.2vw,52px);margin:14px 0 18px}
+  h3{font-size:24px}
+  p.lead{font-size:18px;color:var(--dim);max-width:60ch}
+  .rule{width:48px;height:1px;background:var(--gold);margin:22px 0}
+  .btn{display:inline-block;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:16px 28px;border:1px solid var(--navy);color:var(--navy);transition:all .2s}
+  .btn:hover{background:var(--navy);color:#fff}
+  .btn.solid{background:var(--navy);color:#fff}
+  .btn.solid:hover{background:var(--navy-deep)}
+  .btn.light{border-color:#fff;color:#fff}
+  .btn.light:hover{background:#fff;color:var(--navy)}
+  section{padding:clamp(72px,9vw,128px) 0}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{font-family:var(--serif);font-size:24px;color:var(--navy);letter-spacing:.01em}
+  .brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:-2px;font-weight:400}
+  .links{display:flex;gap:34px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--navy)}
+  .links a{opacity:.8}.links a:hover{opacity:1;color:var(--gold-dark)}
+  .nav-right{display:flex;align-items:center;gap:22px}
+  .phone{font-size:14px;font-weight:500;color:var(--navy)}
+  .lang{font-size:11px;letter-spacing:.14em;color:var(--mute);display:flex;gap:6px}
+  .lang button{background:none;border:0;font:inherit;color:inherit;cursor:pointer;padding:2px}
+  .lang button.on{color:var(--navy);font-weight:600}
+  @media(max-width:900px){.links,.phone{display:none}}
+
+  /* hero */
+  .hero{padding:0;display:grid;grid-template-columns:1.05fr .95fr;min-height:calc(100vh - 76px)}
+  .hero-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,7vw,110px) var(--gutter) clamp(56px,7vw,110px) max(var(--gutter),calc((100vw - var(--max))/2))}
+  .hero h1{font-size:clamp(44px,6vw,84px);margin:18px 0 22px;font-weight:400}
+  .hero h1 em{font-style:italic;color:var(--gold-dark)}
+  .hero .lead{margin-bottom:38px}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative;overflow:hidden;background:var(--panel)}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+  .hero-card{position:absolute;left:0;bottom:0;background:#fff;padding:20px 26px;border-top:1px solid var(--line);border-right:1px solid var(--line);max-width:320px}
+  .hero-card b{display:block;font-family:var(--serif);font-size:22px;font-weight:500;color:var(--navy)}
+  .hero-card span{font-size:12px;color:var(--dim);letter-spacing:.04em}
+  @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0}.hero-img{height:62vw}}
+
+  /* stats */
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:38px 0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .stat b{font-family:var(--serif);font-size:56px;font-weight:500;color:var(--navy);display:block;line-height:1}
+  .stat span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+  @media(max-width:760px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+
+  /* listings */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  @media(max-width:960px){.grid3,.grid4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid3,.grid4{grid-template-columns:1fr}}
+  .card{display:block}
+  .card figure{aspect-ratio:4/3;overflow:hidden;background:var(--panel);position:relative}
+  .card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .card:hover img{transform:scale(1.03)}
+  .tag{position:absolute;top:14px;left:14px;background:#fff;color:var(--navy);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;font-weight:500}
+  .tag.sold{background:var(--navy);color:#fff}
+  .price{font-family:var(--serif);font-size:26px;color:var(--navy);margin-top:16px;font-weight:500}
+  .addr{font-size:14.5px;color:var(--ink);margin-top:2px}
+  .meta{font-size:12px;color:var(--mute);letter-spacing:.06em;margin-top:6px}
+  .more{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);font-weight:500;margin-top:10px;display:inline-block;border-bottom:1px solid var(--gold-light);padding-bottom:2px}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:44px;flex-wrap:wrap}
+  .sec-head h2{margin-bottom:0}
+
+  /* about */
+  .about{background:var(--panel)}
+  .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,96px);align-items:center}
+  .about img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .about p{margin-bottom:18px;color:var(--dim);font-size:17px}
+  .sig{font-family:var(--serif);font-style:italic;font-size:28px;color:var(--navy);margin-top:28px}
+  @media(max-width:860px){.about .wrap{grid-template-columns:1fr}}
+
+  /* sectors */
+  .sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  .sector{padding:28px 24px 28px 0;border-bottom:1px solid var(--line)}
+  .sector h3{font-size:26px;margin-bottom:6px}
+  .sector p{font-size:14.5px;color:var(--dim)}
+  @media(max-width:760px){.sectors{grid-template-columns:1fr}}
+
+  /* testimonials */
+  .quotes{background:var(--navy);color:#fff}
+  .quotes h2,.quotes .eyebrow{color:#fff}.quotes .eyebrow{color:var(--gold-light)}
+  .quote{border-left:1px solid rgba(255,255,255,.25);padding-left:24px}
+  .quote p{font-family:var(--serif);font-size:23px;line-height:1.35;font-weight:400;font-style:italic}
+  .quote cite{display:block;font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:18px;color:var(--gold-light)}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+  .step{border-top:1px solid var(--navy);padding-top:22px}
+  .step:before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:34px;color:var(--gold);display:block;margin-bottom:8px}
+  .step h3{margin-bottom:8px}.step p{color:var(--dim);font-size:15px}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+  /* contact */
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px)}
+  @media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+  .info{font-size:16px;color:var(--dim)}
+  .info b{display:block;font-family:var(--serif);font-size:24px;color:var(--navy);font-weight:500;margin-top:26px}
+  form{display:grid;gap:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:6px;font-weight:500}
+  input,select,textarea{width:100%;border:1px solid var(--line);background:#fff;padding:14px;font:inherit;font-size:15px;color:var(--ink);border-radius:0}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy)}
+  textarea{min-height:120px;resize:vertical}
+
+  footer{border-top:1px solid var(--line);padding:36px 0;font-size:12.5px;color:var(--mute)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer b{color:var(--navy);font-weight:500}
+</style>
+</head>
+<body data-lang="fr">
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">Camille Tremblay<small><span class="fr">Courtier immobilier résidentiel</span><span class="en">Residential real estate broker</span></small></a>
+    <nav class="links">
+      <a href="#proprietes"><span class="fr">Propriétés</span><span class="en">Listings</span></a>
+      <a href="#apropos"><span class="fr">À propos</span><span class="en">About</span></a>
+      <a href="#secteurs"><span class="fr">Secteurs</span><span class="en">Areas</span></a>
+      <a href="#temoignages"><span class="fr">Témoignages</span><span class="en">Clients</span></a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="phone" href="tel:+15145550123">514 555-0123</a>
+      <div class="lang"><button class="on" data-set="fr">FR</button><span>|</span><button data-set="en">EN</button></div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow"><span class="fr">Plateau · Rosemont · Villeray</span><span class="en">Plateau · Rosemont · Villeray</span></div>
+    <h1 class="fr">Vendre bien.<br>Acheter <em>juste.</em></h1>
+    <h1 class="en">Sell well.<br>Buy <em>right.</em></h1>
+    <p class="lead fr">Douze ans à accompagner des familles et des investisseurs dans les quartiers centraux de Montréal. Une approche directe, des chiffres honnêtes, et un seul interlocuteur du début à la fin.</p>
+    <p class="lead en">Twelve years guiding families and investors through Montreal's central neighbourhoods. A direct approach, honest numbers, and one point of contact from start to finish.</p>
+    <div class="cta">
+      <a class="btn solid" href="#contact"><span class="fr">Estimation gratuite</span><span class="en">Free home evaluation</span></a>
+      <a class="btn" href="#proprietes"><span class="fr">Voir mes propriétés</span><span class="en">View listings</span></a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80" alt="Camille Tremblay, courtier immobilier">
+    <div class="hero-card">
+      <b>Camille Tremblay</b>
+      <span class="fr">Courtier immobilier résidentiel<br>Agence immobilière Beaumont</span>
+      <span class="en">Residential real estate broker<br>Agence immobilière Beaumont</span>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>12</b><span class="fr">ans d'expérience</span><span class="en">years in real estate</span></div>
+    <div class="stat"><b>340+</b><span class="fr">transactions conclues</span><span class="en">closed transactions</span></div>
+    <div class="stat"><b>21</b><span class="fr">jours en moyenne sur le marché</span><span class="en">average days on market</span></div>
+    <div class="stat"><b>102 %</b><span class="fr">du prix demandé, en moyenne</span><span class="en">of asking price, on average</span></div>
+  </div>
+</div>
+
+<section id="proprietes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow"><span class="fr">En vente</span><span class="en">For sale</span></div>
+        <h2><span class="fr">Propriétés en vedette</span><span class="en">Featured listings</span></h2>
+      </div>
+      <a class="more" href="https://www.centris.ca" target="_blank" rel="noopener"><span class="fr">Toutes mes inscriptions sur Centris</span><span class="en">All my listings on Centris</span></a>
+    </div>
+    <div class="grid3">
+      <a class="card" href="https://www.centris.ca" target="_blank" rel="noopener">
+        <figure><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt=""><span class="tag fr">Nouveau</span><span class="tag en">New</span></figure>
+        <div class="price">899 000 $</div>
+        <div class="addr">4521, rue Saint-Hubert, Le Plateau-Mont-Royal</div>
+        <div class="meta"><span class="fr">4 chambres · 2 salles de bain · 1 980 pi²</span><span class="en">4 beds · 2 baths · 1,980 sq ft</span></div>
+      </a>
+      <a class="card" href="https://www.centris.ca" target="_blank" rel="noopener">
+        <figure><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt=""></figure>
+        <div class="price">549 000 $</div>
+        <div class="addr">2210, rue Bélanger, app. 3, Rosemont</div>
+        <div class="meta"><span class="fr">2 chambres · 1 salle de bain · 1 050 pi²</span><span class="en">2 beds · 1 bath · 1,050 sq ft</span></div>
+      </a>
+      <a class="card" href="https://www.centris.ca" target="_blank" rel="noopener">
+        <figure><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt=""><span class="tag fr">Visite libre dim.</span><span class="tag en">Open house Sun.</span></figure>
+        <div class="price">1 245 000 $</div>
+        <div class="addr">7855, rue De Gaspé, Villeray</div>
+        <div class="meta"><span class="fr">Triplex · 3 × 5½ · Revenus 54 000 $</span><span class="en">Triplex · 3 × 5½ · $54,000 income</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow"><span class="fr">Vendu récemment</span><span class="en">Recently sold</span></div>
+        <h2><span class="fr">Des résultats, pas des promesses</span><span class="en">Results, not promises</span></h2>
+      </div>
+    </div>
+    <div class="grid4">
+      <div class="card"><figure><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=80" alt=""><span class="tag sold fr">Vendu en 6 jours</span><span class="tag sold en">Sold in 6 days</span></figure><div class="addr">Rue Drolet, Plateau</div><div class="meta"><span class="fr">108 % du prix demandé</span><span class="en">108% of asking</span></div></div>
+      <div class="card"><figure><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt=""><span class="tag sold fr">Vendu en 11 jours</span><span class="tag sold en">Sold in 11 days</span></figure><div class="addr">Av. Christophe-Colomb, Rosemont</div><div class="meta"><span class="fr">Prix demandé obtenu</span><span class="en">Full asking price</span></div></div>
+      <div class="card"><figure><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=700&q=80" alt=""><span class="tag sold fr">Vendu en 14 jours</span><span class="tag sold en">Sold in 14 days</span></figure><div class="addr">Rue Saint-Denis, Villeray</div><div class="meta"><span class="fr">Offres multiples</span><span class="en">Multiple offers</span></div></div>
+      <div class="card"><figure><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=700&q=80" alt=""><span class="tag sold fr">Vendu en 9 jours</span><span class="tag sold en">Sold in 9 days</span></figure><div class="addr">Rue Boyer, Plateau</div><div class="meta"><span class="fr">104 % du prix demandé</span><span class="en">104% of asking</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="apropos">
+  <div class="wrap">
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Camille Tremblay">
+    <div>
+      <div class="eyebrow"><span class="fr">À propos</span><span class="en">About</span></div>
+      <h2><span class="fr">Je vends des maisons dans les rues où j'ai grandi.</span><span class="en">I sell homes on the streets I grew up on.</span></h2>
+      <div class="rule"></div>
+      <p class="fr">Née sur le Plateau, j'ai commencé en immobilier en 2014 après dix ans en gestion de projets. Ce que j'y ai gardé : un calendrier qui tient, des chiffres qu'on peut vérifier et une habitude de dire les choses telles qu'elles sont.</p>
+      <p class="fr">Je travaille seule, volontairement. Vous parlez à la personne qui a visité la propriété, préparé la mise en marché et négocié l'offre. Pas à un adjoint.</p>
+      <p class="en">Born on the Plateau, I moved into real estate in 2014 after ten years in project management. What I kept from it: schedules that hold, numbers you can check, and a habit of saying things as they are.</p>
+      <p class="en">I work alone, on purpose. You talk to the person who visited the property, prepared the listing and negotiated the offer. Not an assistant.</p>
+      <div class="sig">Camille</div>
+    </div>
+  </div>
+</section>
+
+<section id="secteurs">
+  <div class="wrap">
+    <div class="eyebrow"><span class="fr">Secteurs</span><span class="en">Areas</span></div>
+    <h2><span class="fr">Là où je connais chaque rue</span><span class="en">Where I know every street</span></h2>
+    <div class="sectors" style="margin-top:40px">
+      <div class="sector"><h3>Le Plateau-Mont-Royal</h3><p class="fr">Plex, condos divisés, maisons de ville. Prix médian 2025 : 785 000 $.</p><p class="en">Plexes, divided condos, townhouses. 2025 median price: $785,000.</p></div>
+      <div class="sector"><h3>Rosemont – La Petite-Patrie</h3><p class="fr">Le quartier des premières maisons. Forte demande, inventaire serré.</p><p class="en">Where first homes get bought. Strong demand, tight inventory.</p></div>
+      <div class="sector"><h3>Villeray</h3><p class="fr">Triplex et quadruplex pour investisseurs, près du marché Jean-Talon.</p><p class="en">Triplexes and fourplexes for investors, near Jean-Talon market.</p></div>
+      <div class="sector"><h3>Ahuntsic</h3><p class="fr">Unifamiliales et grands terrains, sans quitter l'île.</p><p class="en">Single-family homes and large lots, without leaving the island.</p></div>
+      <div class="sector"><h3>Outremont</h3><p class="fr">Marché discret. Plusieurs ventes hors Centris chaque année.</p><p class="en">A discreet market. Several off-market sales every year.</p></div>
+      <div class="sector"><h3>Mile End</h3><p class="fr">Condos et lofts, acheteurs souvent de l'extérieur du Québec.</p><p class="en">Condos and lofts, buyers often from outside Quebec.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes" id="temoignages">
+  <div class="wrap">
+    <div class="eyebrow"><span class="fr">Témoignages</span><span class="en">Clients</span></div>
+    <h2><span class="fr">Ce que disent mes clients</span><span class="en">What clients say</span></h2>
+    <div class="grid3" style="margin-top:48px">
+      <div class="quote"><p class="fr">« Camille nous a dit dès la première rencontre que notre prix était trop haut. Elle avait raison. Vendu en neuf jours au prix qu'elle avait prédit. »</p><p class="en">"Camille told us at the first meeting that our price was too high. She was right. Sold in nine days at the price she predicted."</p><cite>Marie-Ève et Simon, Rosemont</cite></div>
+      <div class="quote"><p class="fr">« Première maison, mille questions. Elle a répondu à toutes, souvent le soir même. On a eu la maison malgré trois autres offres. »</p><p class="en">"First home, a thousand questions. She answered all of them, often the same evening. We got the house despite three other offers."</p><cite>Nadia B., Villeray</cite></div>
+      <div class="quote"><p class="fr">« Un triplex vendu avec les locataires en place, sans drame. Elle gère les détails qu'on ne voit pas. »</p><p class="en">"A triplex sold with tenants in place, no drama. She handles the details you don't see."</p><cite>Jean-François L., investisseur</cite></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow"><span class="fr">Comment ça se passe</span><span class="en">How it works</span></div>
+    <h2><span class="fr">Vendre avec moi, en trois étapes</span><span class="en">Selling with me, in three steps</span></h2>
+    <div class="steps" style="margin-top:48px">
+      <div class="step"><h3 class="fr">Une évaluation honnête</h3><h3 class="en">An honest evaluation</h3><p class="fr">Je visite, je compare avec les ventes réelles des douze derniers mois, et je vous donne une fourchette que je peux défendre.</p><p class="en">I visit, compare against real sales from the last twelve months, and give you a range I can defend.</p></div>
+      <div class="step"><h3 class="fr">Une mise en marché soignée</h3><h3 class="en">A careful launch</h3><p class="fr">Photographe professionnel, plan, vidéo, fiche Centris en deux langues, et un calendrier de visites qui respecte votre vie.</p><p class="en">Professional photography, floor plan, video, bilingual Centris listing, and a showing schedule that respects your life.</p></div>
+      <div class="step"><h3 class="fr">Une négociation sans surprise</h3><h3 class="en">A negotiation without surprises</h3><p class="fr">Chaque offre expliquée ligne par ligne. Vous décidez, avec toute l'information.</p><p class="en">Every offer explained line by line. You decide, with all the information.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="background:var(--panel)">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2><span class="fr">Parlons de votre projet</span><span class="en">Let's talk about your project</span></h2>
+      <div class="rule"></div>
+      <div class="info">
+        <p class="fr">Une réponse dans la journée, en semaine. Les estimations sont gratuites et sans engagement.</p>
+        <p class="en">A reply the same day on weekdays. Evaluations are free, with no obligation.</p>
+        <b>514 555-0123</b>
+        <b>camille@exemple.ca</b>
+        <b>Agence immobilière Beaumont<br><span style="font-family:var(--sans);font-size:14px;color:var(--dim);font-weight:300">4000, rue Saint-Denis, Montréal (Québec) H2W 2M2</span></b>
+      </div>
+    </div>
+    <form onsubmit="event.preventDefault();alert('Merci. (Formulaire de démonstration)')">
+      <div class="row">
+        <div><label class="fr">Prénom</label><label class="en">First name</label><input type="text" required></div>
+        <div><label class="fr">Nom</label><label class="en">Last name</label><input type="text" required></div>
+      </div>
+      <div class="row">
+        <div><label class="fr">Courriel</label><label class="en">Email</label><input type="email" required></div>
+        <div><label class="fr">Téléphone</label><label class="en">Phone</label><input type="tel"></div>
+      </div>
+      <div><label class="fr">Je souhaite</label><label class="en">I want to</label>
+        <select><option class="fr">Vendre ma propriété</option><option class="fr">Acheter</option><option class="fr">Obtenir une estimation</option><option class="en">Sell my property</option><option class="en">Buy</option><option class="en">Get an evaluation</option></select></div>
+      <div><label>Message</label><textarea></textarea></div>
+      <p style="font-size:12px;color:var(--mute);line-height:1.5"><span class="fr">Vos coordonnées servent uniquement à répondre à votre demande. Elles ne sont ni partagées ni vendues. Responsable de la protection des renseignements personnels : Camille Tremblay.</span><span class="en">Your details are used only to answer your request. They are never shared or sold. Person in charge of personal information: Camille Tremblay.</span></p>
+      <div><button class="btn solid" type="submit" style="cursor:pointer;background:var(--navy);border:1px solid var(--navy);color:#fff"><span class="fr">Envoyer</span><span class="en">Send</span></button></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Camille Tremblay</b>, <span class="fr">courtier immobilier résidentiel · Agence immobilière Beaumont, agence immobilière, franchisée indépendante et autonome</span><span class="en">residential real estate broker · Agence immobilière Beaumont, real estate agency, independently owned and operated</span><br><span class="fr">Permis OACIQ n° A0000 · Membre de l'APCIQ</span><span class="en">OACIQ licence no. A0000 · Member of the QPAREB</span></div>
+    <div>© 2026 · <span class="fr">Site conçu par</span><span class="en">Site by</span> <b>Max Baker</b></div>
+  </div>
+</footer>
+
+<script>
+  const btns=document.querySelectorAll('.lang button');
+  function setLang(l){document.body.dataset.lang=l;document.documentElement.lang=l;btns.forEach(b=>b.classList.toggle('on',b.dataset.set===l));}
+  btns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.set)));
+  if(location.hash==='#en')setLang('en');
+</script>
+</body>
+</html>

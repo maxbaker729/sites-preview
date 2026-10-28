@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandra Lessard — Courtier immobilier, Sherbrooke</title>
+<meta name="description" content="Alexandra Lessard, courtier immobilier à Sherbrooke. Centre-ville · Mont-Bellevue · Rock Forest. Estimation gratuite de votre propriété.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100,400;0,100,500;0,125,500;0,125,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f6f5f2; --line:#e3e1dc;
+    --navy:#002349; --navy-deep:#001731; --ink:#1a1a1a; --dim:#5b5b5b; --mute:#9a9a96;
+    --gold:#c29b40; --gold-dark:#a8842f; --gold-light:#e9d9b4;
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Libre Franklin",-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --max:1180px; --gutter:clamp(20px,5vw,64px);
+    --hdr-bg:rgba(255,255,255,.92); --card-bg:#002349; --card-fg:#ffffff; --card-sub:#e9d9b4;
+    --btn-bg:#002349; --btn-fg:#ffffff; --btn-radius:0; --img-radius:0; --h-weight:500; --h-track:-.01em; --h-transform:none;
+    --eyebrow-color:#a8842f; --body-weight:300;
+  }
+  :root{--serif:"Archivo",Arial,sans-serif;--sans:"Archivo",Arial,sans-serif}:root{--bg:#ffffff;--panel:#f2eeea;--line:#e3dfdb;--navy:#111111;--navy-deep:#000;--ink:#111111;--dim:#5f5d61;--mute:#8a888c;--gold:#3e1214;--gold-dark:#2a0b0d;--gold-light:#d9c3c4;--hdr-bg:rgba(255,255,255,.94);--card-bg:#111111;--card-fg:#ffffff;--card-sub:#d9c3c4;--btn-bg:#3e1214;--btn-fg:#ffffff;--eyebrow-color:#3e1214;--label-font:'DM Mono',monospace;--h-weight:500;--h-stretch:125%;--h-track:-.03em;--body-weight:400;--img-filter:grayscale(1)}.eyebrow{letter-spacing:.08em}.btn{letter-spacing:.08em}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);font-weight:var(--body-weight);color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  body[data-lang="fr"] .en{display:none!important}
+  body[data-lang="en"] .fr{display:none!important}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+  .eyebrow{font-family:var(--label-font,var(--sans));font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--eyebrow-color);font-weight:500}
+  h1,h2,h3{font-family:var(--serif);font-weight:var(--h-weight);color:var(--navy);line-height:1.08;letter-spacing:var(--h-track);text-transform:var(--h-transform);font-stretch:var(--h-stretch,100%)}
+  h2{font-size:clamp(34px,4.2vw,52px);margin:14px 0 18px}
+  h3{font-size:24px}
+  p.lead{font-size:18px;color:var(--dim);max-width:60ch}
+  .rule{width:48px;height:1px;background:var(--gold);margin:22px 0}
+  .btn{display:inline-block;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:16px 28px;border:1px solid var(--navy);color:var(--navy);border-radius:var(--btn-radius);transition:all .2s}
+  .btn:hover{background:var(--btn-bg);border-color:var(--btn-bg);color:var(--btn-fg)}
+  .btn.solid{background:var(--btn-bg);border-color:var(--btn-bg);color:var(--btn-fg)}
+  .btn.solid:hover{opacity:.9}
+  .btn.light{border-color:#fff;color:#fff}
+  .btn.light:hover{background:#fff;color:var(--navy)}
+  section{padding:clamp(72px,9vw,128px) 0}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:var(--hdr-bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{font-family:var(--serif);font-size:24px;color:var(--navy);letter-spacing:.01em}
+  .brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:-2px;font-weight:400}
+  .links{display:flex;gap:34px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--navy)}
+  .links a{opacity:.8}.links a:hover{opacity:1;color:var(--gold-dark)}
+  .nav-right{display:flex;align-items:center;gap:22px}
+  .phone{font-size:14px;font-weight:500;color:var(--navy)}
+  .lang{font-size:11px;letter-spacing:.14em;color:var(--mute);display:flex;gap:6px}
+  .lang button{background:none;border:0;font:inherit;color:inherit;cursor:pointer;padding:2px}
+  .lang button.on{color:var(--navy);font-weight:600}
+  @media(max-width:900px){.links,.phone{display:none}}
+
+  /* hero */
+  .hero{padding:0;display:grid;grid-template-columns:1.05fr .95fr;min-height:calc(100vh - 76px)}
+  .hero-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,7vw,110px) var(--gutter) clamp(56px,7vw,110px) max(var(--gutter),calc((100vw - var(--max))/2))}
+  .hero h1{font-size:clamp(44px,6vw,84px);margin:18px 0 22px;font-weight:400}
+  .hero h1 em{font-style:italic;color:var(--gold-dark)}
+  .hero .lead{margin-bottom:38px}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative;overflow:hidden;background:var(--panel);border-radius:var(--img-radius)}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:var(--img-radius)}
+  .hero-card{position:absolute;left:0;bottom:0;background:var(--bg);padding:20px 26px;border-top:1px solid var(--line);border-right:1px solid var(--line);max-width:320px}
+  .hero-card b{display:block;font-family:var(--serif);font-size:22px;font-weight:500;color:var(--navy)}
+  .hero-card span{font-size:12px;color:var(--dim);letter-spacing:.04em}
+  @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:0}.hero-img{height:62vw}}
+  /* full-bleed variant: one column, photo behind, text on top */
+  .hero[data-hero="fullbleed"]{grid-template-columns:1fr;position:relative;min-height:100vh;isolation:isolate}
+  .hero[data-hero="fullbleed"] .hero-img{position:absolute;inset:0;z-index:-1}
+  .hero[data-hero="fullbleed"] .hero-img img{object-position:center;filter:var(--hero-grade,none)}
+  .hero[data-hero="fullbleed"] .hero-img:after{content:"";position:absolute;inset:0;background:var(--hero-overlay,linear-gradient(to top,rgba(0,0,0,.86) 0%,rgba(0,0,0,.6) 45%,rgba(0,0,0,.25) 100%))}
+  .hero[data-hero="fullbleed"] .hero-text{text-shadow:0 1px 2px rgba(0,0,0,.35)}
+  .hero[data-hero="fullbleed"] .hero-card{display:none}
+  .hero[data-hero="fullbleed"] .hero-text{justify-content:flex-end;max-width:var(--max);margin:0 auto;width:100%;padding:0 var(--gutter) clamp(48px,6vw,80px)}
+  .hero[data-hero="fullbleed"] .lead{max-width:48ch;margin-bottom:28px}
+  .hero[data-hero="fullbleed"] h1,.hero[data-hero="fullbleed"] .lead,.hero[data-hero="fullbleed"] .eyebrow{color:#fff}
+  .hero[data-hero="fullbleed"] h1 em{color:var(--hero-accent,#fff)}
+  .hero[data-hero="fullbleed"] .btn{border-color:#fff;color:#fff}.hero[data-hero="fullbleed"] .btn:hover{background:#fff;color:#111}
+  .hero[data-hero="fullbleed"] .btn.solid{background:#fff;color:#111;border-color:#fff}
+  /* typographic + photo strip variant: text first, 21:9 photo under the fold */
+  .hero[data-hero="typestrip"]{grid-template-columns:1fr;min-height:0}
+  .hero[data-hero="typestrip"] .hero-text{max-width:var(--max);margin:0 auto;width:100%;padding:clamp(64px,8vw,120px) var(--gutter) clamp(40px,5vw,64px)}
+  .hero[data-hero="typestrip"] h1{font-size:clamp(52px,8.5vw,120px);max-width:16ch}
+  .hero[data-hero="typestrip"] .hero-img{max-width:var(--max);margin:0 auto;width:calc(100% - 2*var(--gutter));aspect-ratio:21/9;height:auto}
+  .hero[data-hero="typestrip"] .hero-img img{filter:var(--img-filter,none);transition:filter .6s}
+  .hero[data-hero="typestrip"] .hero-img:hover img{filter:none}
+  .hero[data-hero="typestrip"] .hero-card{display:none}
+  /* typographic variant: no image, very large name */
+  .hero[data-hero="type"]{grid-template-columns:1fr;min-height:0}
+  .hero[data-hero="type"] .hero-img{display:none}
+  .hero[data-hero="type"] .hero-text{max-width:var(--max);margin:0 auto;width:100%;padding:clamp(80px,10vw,150px) var(--gutter)}
+  .hero[data-hero="type"] h1{font-size:clamp(56px,9vw,132px);max-width:14ch}
+
+  /* stats */
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:38px 0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .stat b{font-family:var(--serif);font-size:56px;font-weight:500;color:var(--navy);display:block;line-height:1}
+  .stat span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+  @media(max-width:760px){.stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .stat{min-width:0}
+  .stat b{font-size:clamp(30px,7.5vw,56px);overflow-wrap:anywhere}
+  html,body{overflow-x:hidden}
+  @media(max-width:560px){.cta{flex-direction:column;align-items:stretch}.cta .btn{text-align:center}
+    .hero h1{font-size:clamp(40px,11vw,84px)}
+    .hero[data-hero="type"] h1,.hero[data-hero="typestrip"] h1{font-size:clamp(44px,12vw,132px)}
+    .card.text figure{aspect-ratio:16/9}
+    .addr,.meta{overflow-wrap:anywhere}}
+
+  /* listings */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  @media(max-width:960px){.grid3,.grid4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid3,.grid4{grid-template-columns:1fr}}
+  .card{display:block}
+  .card figure{aspect-ratio:4/3;overflow:hidden;background:var(--panel);position:relative;border-radius:var(--img-radius)}
+  .card img{width:100%;height:100%;object-fit:cover;transition:transform .6s,filter .6s;filter:var(--img-filter,none)}
+  .card:hover img{filter:none}
+  .card:hover img{transform:scale(1.03)}
+  .tag{position:absolute;top:14px;left:14px;background:var(--tag-bg,#fff);color:var(--tag-fg,var(--navy));font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;font-weight:500;border-radius:var(--tag-radius,0)}
+  .tag.sold{background:var(--navy);color:#fff}
+.card.text figure{aspect-ratio:4/3;background:var(--card-bg);display:flex;flex-direction:column;justify-content:flex-end;padding:24px}
+  .card.text figure b{font-family:var(--serif);font-size:40px;font-weight:500;color:var(--card-fg);line-height:1}
+  .card.text figure small{font-family:var(--label-font,var(--sans));font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--card-sub);margin-top:10px}
+  .card.text:hover figure{opacity:.92}
+  .price{font-family:var(--serif);font-size:26px;color:var(--navy);margin-top:16px;font-weight:500}
+  .addr{font-size:14.5px;color:var(--ink);margin-top:2px}
+  .meta{font-size:12px;color:var(--mute);letter-spacing:.06em;margin-top:6px}
+  .more{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);font-weight:500;margin-top:10px;display:inline-block;border-bottom:1px solid var(--gold-light);padding-bottom:2px}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:44px;flex-wrap:wrap}
+  .sec-head h2{margin-bottom:0}
+
+  /* about */
+  .about{background:var(--panel)}
+  .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,96px);align-items:center}
+  .about img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--img-radius)}
+  .about p{margin-bottom:18px;color:var(--dim);font-size:17px}
+  .sig{font-family:var(--serif);font-style:italic;font-size:28px;color:var(--navy);margin-top:28px}
+  @media(max-width:860px){.about .wrap{grid-template-columns:1fr}}
+
+  /* sectors */
+  .sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  .sector{padding:28px 24px 28px 0;border-bottom:1px solid var(--line)}
+  .sector h3{font-size:26px;margin-bottom:6px}
+  .sector p{font-size:14.5px;color:var(--dim)}
+  @media(max-width:760px){.sectors{grid-template-columns:1fr}}
+
+  /* testimonials */
+  .quotes{background:var(--navy);color:#fff}
+  .quotes h2,.quotes .eyebrow{color:#fff}.quotes .eyebrow{color:var(--gold-light)}
+  .quote{border-left:1px solid rgba(255,255,255,.25);padding-left:24px}
+  .quote p{font-family:var(--serif);font-size:23px;line-height:1.35;font-weight:400;font-style:italic}
+  .quote cite{display:block;font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:18px;color:var(--gold-light)}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+  .step{border-top:1px solid var(--navy);padding-top:22px}
+  .step:before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:34px;color:var(--gold);display:block;margin-bottom:8px}
+  .step h3{margin-bottom:8px}.step p{color:var(--dim);font-size:15px}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+  /* contact */
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px)}
+  @media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+  .info{font-size:16px;color:var(--dim)}
+  .info b{display:block;font-family:var(--serif);font-size:24px;color:var(--navy);font-weight:500;margin-top:26px}
+  form{display:grid;gap:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{font-family:var(--label-font,var(--sans));font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:6px;font-weight:500}
+  input,select,textarea{width:100%;border:1px solid var(--line);background:var(--bg);padding:14px;font:inherit;font-size:15px;color:var(--ink);border-radius:0}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy)}
+  textarea{min-height:120px;resize:vertical}
+
+  footer{border-top:1px solid var(--line);padding:36px 0;font-size:12.5px;color:var(--mute)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer b{color:var(--navy);font-weight:500}
+</style>
+</head>
+<body data-lang="fr">
+<div style="background:var(--card-bg);color:var(--card-sub);font-size:12px;letter-spacing:.08em;text-align:center;padding:8px 16px"><span class="fr">Maquette préparée pour Alexandra Lessard · vos inscriptions sont réelles, les textes sont un point de départ</span><span class="en">Mockup prepared for Alexandra Lessard · your listings are real, the text is a starting point</span></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">Alexandra Lessard<small><span class="fr">Courtier immobilier</span><span class="en">Real estate broker</span></small></a>
+    <nav class="links">
+      <a href="#proprietes"><span class="fr">Propriétés</span><span class="en">Listings</span></a>
+      <a href="#apropos"><span class="fr">À propos</span><span class="en">About</span></a>
+      <a href="#secteurs"><span class="fr">Secteurs</span><span class="en">Areas</span></a>
+      
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="phone" href="tel:+18196791153">819-679-1153</a>
+      <div class="lang"><button class="on" data-set="fr">FR</button><span>|</span><button data-set="en">EN</button></div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" data-hero="typestrip">
+  <div class="hero-text">
+    <div class="eyebrow"><span class="fr">Centre-ville · Mont-Bellevue · Rock Forest</span><span class="en">Centre-ville · Mont-Bellevue · Rock Forest</span></div>
+    <h1 class="fr">Vendre bien.<br>Acheter <em>juste.</em></h1>
+    <h1 class="en">Sell well.<br>Buy <em>right.</em></h1>
+    <p class="lead fr">J'accompagne des familles et des investisseurs à Sherbrooke et dans les environs. Une approche directe, des chiffres honnêtes, et un seul interlocuteur du début à la fin.</p>
+    <p class="lead en">Guiding families and investors in Sherbrooke and the surrounding area. A direct approach, honest numbers, and one point of contact from start to finish.</p>
+    <div class="cta">
+      <a class="btn solid" href="#contact"><span class="fr">Estimation gratuite</span><span class="en">Free home evaluation</span></a>
+      <a class="btn" href="#proprietes"><span class="fr">Voir mes propriétés</span><span class="en">View listings</span></a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=80" alt="Alexandra Lessard">
+    <div class="hero-card">
+      <b>Alexandra Lessard</b>
+      <span class="fr">Courtier immobilier<br>Royal LePage Évolution</span>
+      <span class="en">Real estate broker<br>Royal LePage Évolution</span>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>Sherbrooke</b><span class="fr">Sherbrooke et les environs</span><span class="en">Sherbrooke and surroundings</span></div>
+    <div class="stat"><b>OACIQ</b><span class="fr">courtier immobilier</span><span class="en">licensed broker</span></div>
+    <div class="stat"><b>24 h</b><span class="fr">réponse le jour même</span><span class="en">same-day reply</span></div>
+    <div class="stat"><b>FR · EN</b><span class="fr">service dans les deux langues</span><span class="en">service in both languages</span></div>
+  </div>
+</div>
+
+<section id="proprietes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow"><span class="fr">Inscriptions actives</span><span class="en">Active listings</span></div>
+        <h2><span class="fr">Propriétés en vedette</span><span class="en">Featured listings</span></h2>
+      </div>
+      <a class="more" href="https://www.centris.ca" target="_blank" rel="noopener"><span class="fr">Toutes mes inscriptions sur Centris</span><span class="en">All my listings on Centris</span></a>
+    </div>
+    <div class="grid3">
+      <a class="card text" href="https://www.centris.ca/fr/triplex~a-vendre~magog/16530636" target="_blank" rel="noopener">
+        <figure><b>735 000 $</b><small><span class="fr">Voir sur Centris</span><span class="en">View on Centris</span></small></figure>
+        <div class="addr">816 - 822, Rue Degré , Magog</div>
+        <div class="meta"><span class="fr">3 ch. · 1 sdb</span><span class="en">3 bed · 1 bath</span></div>
+      </a>
+      <a class="card text" href="https://www.centris.ca/fr/maison~a-vendre~coaticook/9597840" target="_blank" rel="noopener">
+        <figure><b>295 000 $</b><small><span class="fr">Voir sur Centris</span><span class="en">View on Centris</span></small></figure>
+        <div class="addr">432, Rue May , Coaticook</div>
+        <div class="meta"><span class="fr">3 ch. · 1 sdb</span><span class="en">3 bed · 1 bath</span></div>
+      </a>
+      <a class="card text" href="https://www.centris.ca/fr/chalet~a-vendre~stanstead-canton/13560028" target="_blank" rel="noopener">
+        <figure><b>849 000 $</b><small><span class="fr">Voir sur Centris</span><span class="en">View on Centris</span></small></figure>
+        <div class="addr">14, Chemin du Ruisseau-Gale , Stanstead - Canton</div>
+        <div class="meta"><span class="fr">5 ch. · 3 sdb</span><span class="en">5 bed · 3 bath</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="apropos">
+  <div class="wrap">
+    <img src="https://mspublic.centris.ca/media.ashx?id=ADDD250DDD1B0F4DDDDDDDDDDD&amp;t=c&amp;w=190&amp;h=220&amp;sm=m" alt="Alexandra Lessard">
+    <div>
+      <div class="eyebrow"><span class="fr">À propos</span><span class="en">About</span></div>
+      <h2><span class="fr">Un seul courtier, du début à la fin.</span><span class="en">One broker, start to finish.</span></h2>
+      <div class="rule"></div>
+      <p class="fr">J'accompagne des familles, des premiers acheteurs et des investisseurs à Sherbrooke et dans les environs. Ce que mes clients retiennent : un calendrier qui tient, des chiffres qu'on peut vérifier et une habitude de dire les choses telles qu'elles sont.</p>
+      <p class="fr">Vous parlez à la personne qui a visité la propriété, préparé la mise en marché et négocié l'offre. Un seul interlocuteur, du début à la fin.</p>
+      <p class="en">I work with families, first-time buyers and investors in Sherbrooke and the surrounding area. What clients remember: schedules that hold, numbers you can check, and a habit of saying things as they are.</p>
+      <p class="en">You talk to the person who visited the property, prepared the listing and negotiated the offer. One point of contact, start to finish.</p>
+      <div class="sig">Alexandra</div>
+    </div>
+  </div>
+</section>
+
+<section id="secteurs">
+  <div class="wrap">
+    <div class="eyebrow"><span class="fr">Secteurs</span><span class="en">Areas</span></div>
+    <h2><span class="fr">Là où je connais chaque rue</span><span class="en">Where I know every street</span></h2>
+    <div class="sectors" style="margin-top:40px">
+      <div class="sector"><h3>Centre-ville</h3><p class="fr">Plex et condos, marché locatif actif.</p><p class="en">Plexes and condos, active rental market.</p></div>
+      <div class="sector"><h3>Mont-Bellevue</h3><p class="fr">Près de l'Université, premières maisons.</p><p class="en">Near the university, first homes.</p></div>
+      <div class="sector"><h3>Rock Forest</h3><p class="fr">Familles, maisons récentes, grands terrains.</p><p class="en">Families, newer homes, large lots.</p></div>
+      <div class="sector"><h3>Fleurimont</h3><p class="fr">Bon rapport qualité-prix, secteur hospitalier.</p><p class="en">Good value, near the hospital.</p></div>
+      <div class="sector"><h3>North Hatley</h3><p class="fr">Lac Massawippi, maisons de villégiature.</p><p class="en">Lake Massawippi, vacation homes.</p></div>
+      <div class="sector"><h3>Magog</h3><p class="fr">Lac Memphrémagog, marché secondaire actif.</p><p class="en">Lake Memphremagog, an active second-home market.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow"><span class="fr">Comment ça se passe</span><span class="en">How it works</span></div>
+    <h2><span class="fr">Vendre avec moi, en trois étapes</span><span class="en">Selling with me, in three steps</span></h2>
+    <div class="steps" style="margin-top:48px">
+      <div class="step"><h3 class="fr">Une évaluation honnête</h3><h3 class="en">An honest evaluation</h3><p class="fr">Je visite, je compare avec les ventes réelles des douze derniers mois, et je vous donne une fourchette que je peux défendre.</p><p class="en">I visit, compare against real sales from the last twelve months, and give you a range I can defend.</p></div>
+      <div class="step"><h3 class="fr">Une mise en marché soignée</h3><h3 class="en">A careful launch</h3><p class="fr">Photographe professionnel, plan, vidéo, fiche Centris en deux langues, et un calendrier de visites qui respecte votre vie.</p><p class="en">Professional photography, floor plan, video, bilingual Centris listing, and a showing schedule that respects your life.</p></div>
+      <div class="step"><h3 class="fr">Une négociation sans surprise</h3><h3 class="en">A negotiation without surprises</h3><p class="fr">Chaque offre expliquée ligne par ligne. Vous décidez, avec toute l'information.</p><p class="en">Every offer explained line by line. You decide, with all the information.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="background:var(--panel)">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2><span class="fr">Parlons de votre projet</span><span class="en">Let's talk about your project</span></h2>
+      <div class="rule"></div>
+      <div class="info">
+        <p class="fr">Une réponse dans la journée, en semaine. Les estimations sont gratuites et sans engagement.</p>
+        <p class="en">A reply the same day on weekdays. Evaluations are free, with no obligation.</p>
+        <b>819-679-1153</b>
+        <b>alexandralessard@royallepage.ca</b>
+        <b>Royal LePage Évolution<br><span style="font-family:var(--sans);font-size:14px;color:var(--dim);font-weight:300">Sherbrooke (Québec)</span></b>
+      </div>
+    </div>
+    <form onsubmit="event.preventDefault();alert('Merci. (Formulaire de démonstration)')">
+      <div class="row">
+        <div><label class="fr">Prénom</label><label class="en">First name</label><input type="text" required></div>
+        <div><label class="fr">Nom</label><label class="en">Last name</label><input type="text" required></div>
+      </div>
+      <div class="row">
+        <div><label class="fr">Courriel</label><label class="en">Email</label><input type="email" required></div>
+        <div><label class="fr">Téléphone</label><label class="en">Phone</label><input type="tel"></div>
+      </div>
+      <div><label class="fr">Je souhaite</label><label class="en">I want to</label>
+        <select class="fr"><option>Vendre ma propriété</option><option>Acheter</option><option>Obtenir une estimation</option></select><select class="en"><option>Sell my property</option><option>Buy</option><option>Get an evaluation</option></select></div>
+      <div><label>Message</label><textarea></textarea></div>
+      <p style="font-size:12px;color:var(--mute);line-height:1.5"><span class="fr">Vos coordonnées servent uniquement à répondre à votre demande. Elles ne sont ni partagées ni vendues. Responsable de la protection des renseignements personnels : Alexandra Lessard.</span><span class="en">Your details are used only to answer your request. They are never shared or sold. Person in charge of personal information: Alexandra Lessard.</span></p>
+      <div><button class="btn solid" type="submit" style="cursor:pointer"><span class="fr">Envoyer</span><span class="en">Send</span></button></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Alexandra Lessard</b>, <span class="fr">courtier immobilier · Royal LePage Évolution, agence immobilière, franchisée indépendante et autonome</span><span class="en">real estate broker · Royal LePage Évolution, real estate agency, independently owned and operated</span><br><span class="fr">Permis OACIQ n° — · Membre de l'APCIQ</span><span class="en">OACIQ licence no. — · Member of the QPAREB</span></div>
+    <div>© 2026 · <span class="fr">Site conçu par</span><span class="en">Site by</span> <b>Max Baker</b></div>
+  </div>
+</footer>
+
+<script>
+  const btns=document.querySelectorAll('.lang button');
+  function setLang(l){document.body.dataset.lang=l;document.documentElement.lang=l;btns.forEach(b=>b.classList.toggle('on',b.dataset.set===l));}
+  btns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.set)));
+  if(location.hash==='#en')setLang('en');
+</script>
+</body>
+</html>
